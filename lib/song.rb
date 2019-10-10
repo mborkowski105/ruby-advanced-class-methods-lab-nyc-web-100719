@@ -13,10 +13,17 @@ class Song
   end
   
   def self.create 
+<<<<<<< HEAD
     song = self.new
     song.save
      
     return song
+=======
+     song = self.new
+     song.save
+     
+     return song
+>>>>>>> 9b8c960f2250318392585841d5ccda478ab5f12c
   end
   
   def self.new_by_name(name)
@@ -35,6 +42,7 @@ class Song
   end
   
   def self.find_by_name(name) 
+<<<<<<< HEAD
     result = @@all.find{|song| song.name == name}
     return result
   end
@@ -69,5 +77,8 @@ class Song
   
   def self.destroy_all 
     @@all.clear
+=======
+    @@all.find{|song| song.name == name}.name
+>>>>>>> 9b8c960f2250318392585841d5ccda478ab5f12c
   end
 end
